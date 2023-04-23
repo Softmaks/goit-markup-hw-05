@@ -19,6 +19,7 @@
 <link
   href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
   rel="stylesheet" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <!-- Custom styles -->
 <link rel="stylesheet" href="./css/styles.css" />
@@ -58,7 +59,7 @@
 <section class="main-pic-description">
 <div class="container">
             <h1 class="main-header">Effective Solutions for Your Business</h1>
-            <button type="button" class="main-button">Order Service</button>
+            <button type="button" class="main-button" data-modal-open>Order Service</button>
 </div>
 </section>
 
@@ -467,5 +468,25 @@
         </div>
 </div>
 </footer>
+
+
+
+<!-- Modal window -->
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <button class="modal-btn" data-modal-close>
+            <svg class="modal-icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-Vector"></use>
+            </svg>
+        </button>
+    </div>
+</div>
+
+
+<!-- JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="./js/animation.js"></script>
+<script src="./js/modal.js"></script>
+
 </body>
 </html>

@@ -13,20 +13,24 @@ html {
 }
 
 :root {
+  /* Fonts */
+  --primary-font: "Roboto", sans-serif;
+  --footer-font: "Roboto", sans-serif;
+
   /* BG colors */
   --main-bg-color: #ffffff;
   --second-bg-color: #f4f4fd;
-  --footer-bg-color: #2e2f42;
+  --footer-bg-color: #2E2F42;
   --ourteam-bg-color: #f4f4fd;
+  --modal-bg-color:#FCFCFC;
 
   /* Text colors */
   --main-text-color: #434455;
   --main-btn-color: #ffffff;
   --main-title-color: #2e2f42;
 
-  /* Fonts */
-  --primary-font: "Roboto", sans-serif;
-  --footer-font: "Roboto", sans-serif;
+  /* Border color */
+  --border-color:#E7E9FC;
 
   /* logo colors */
   --first-logo-color: #4d5ae5;
@@ -49,6 +53,8 @@ html {
 
 /* Animation */
 --timing-fun-animation: cubic-bezier(0.4, 0, 0.2, 1);
+
+
 
 
 }
@@ -161,7 +167,7 @@ button {
 */
 .header {
   color: var(--main-title-color);
-  border-bottom: 1px solid #E7E9FC;
+  border-bottom: 1px solid var(--border-color);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 
 }
@@ -592,7 +598,7 @@ fill:currentColor;
 
   padding: 12px 24px;
   border-radius: 4px;
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--border-color);
 }
 
 .pf-butt-filter:hover,
@@ -613,7 +619,7 @@ fill:currentColor;
 
 .pf-for-imgtext{
 padding: 32px 16px;
-border: 1px solid #e7e9fc;
+border: 1px solid var(--border-color);
 border-top: none;
 }
 
@@ -647,7 +653,7 @@ border-top: none;
 
 /**
   |============================
-  | Footer- Section
+  | Footer - Section
   |============================
 */
 .footer {
@@ -718,10 +724,9 @@ height: 40px;
 display: flex;
 align-items: center;
 justify-content: center ;
-  
+
 height: 100%;
 width: 100%;
-  
 
 background:var(--first-social-color);
 border-radius: 50%;
@@ -734,4 +739,69 @@ fill: var(--second-bg-color);
 .footer-social-link:hover,
 .footer-social-link:focus {
 background-color:var(--third-social-color);
+}
+
+
+
+/**
+  |============================
+  | Modal window
+  |============================
+*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  background-color: rgba(46, 47, 66, 0.4);
+  backdrop-filter: blur(0.5px);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 408px;
+  min-height: 584px;
+     
+  background-color: var(--modal-bg-color);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 24px;
+
+}
+
+.modal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+
+
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--border-color);
+}
+
+.modal-icon {
+} 
+
+
+.modal-btn:hover,
+.modal-btn:focus {
+background-color:var(--second-btnlink-color);
+fill: var(--second-bg-color);
 }
