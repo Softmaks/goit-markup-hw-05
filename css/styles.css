@@ -327,6 +327,7 @@ background-color: var(--second-btnlink-color);
   transition: background-color 250ms var(--timing-fun-animation);
 }
 
+
 .main-button:hover, 
 .main-button:focus {
   background-color: var(--second-btnlink-color);
