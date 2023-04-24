@@ -631,6 +631,7 @@ fill:currentColor;
   border: 1px solid var(--border-color);
 
   transition: color 250ms var(--timing-fun-animation), 
+  border 250ms var(--timing-fun-animation),
   background-color 250ms var(--timing-fun-animation);
 }
 
