@@ -57,6 +57,9 @@ html {
   --anim-fast: 250ms ease-in;
   --anim-slow: 1000ms ease-in-out;
 
+
+
+
 }
 
 /**
@@ -111,6 +114,8 @@ h1,h2,h3,h4,h5,h6,p,ul,ol {
 .link {
   color: currentColor;
   text-decoration: none;
+
+  transition: color 250ms var(--timing-fun-animation);
 }
 .link:hover,
 .link:focus {
@@ -132,6 +137,7 @@ button {
 
 
 
+  
 /**
   |============================
   | Logo section
@@ -160,6 +166,7 @@ button {
 
 
 
+  
 /**
   |============================
   | Navigation section
@@ -188,6 +195,8 @@ button {
   padding: 24px 0;
   display: block;
   position: relative;
+
+  transition: color 250ms var(--timing-fun-animation);
 }
 
 .header-nav-link:hover,
@@ -218,7 +227,6 @@ position: absolute;
 left: 0;
 bottom: 0;
 transition: 250ms var(--timing-fun-animation);
-
 }
 
 .header-nav-link.actual-link::after{
@@ -250,6 +258,8 @@ background-color: var(--second-btnlink-color);
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
+
+  transition: color 250ms var(--timing-fun-animation);
 }
 
 .contact-link:hover,
@@ -313,11 +323,15 @@ background-color: var(--second-btnlink-color);
   background-color: var(--first-btnlink-color);
   color: var(--main-btn-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color 250ms var(--timing-fun-animation);
 }
 
-.main-button:hover, .main-button:focus {
+.main-button:hover, 
+.main-button:focus {
   background-color: var(--second-btnlink-color);
 }
+
 
 
 
@@ -384,6 +398,9 @@ border-radius: 4px;
 margin-bottom: 8px;
 }
 
+
+
+
 /**
   |============================
   | Index - Section №3 - What are we doing
@@ -403,6 +420,9 @@ margin-bottom: 8px;
 .wotd-list-item {
   width: calc((100% - 48px)/ 3);
 }
+
+
+
 
 /**
   |============================
@@ -487,16 +507,20 @@ width: 100%;
 background-color: var(--second-social-color);
 background:var(--first-social-color);
 border-radius: 50%;
+
+transition: background-color 250ms var(--timing-fun-animation);
+}
+
+.team-socials-link:hover,
+.team-socials-link:focus {
+  background-color:var(--second-btnlink-color);
 }
 
 .team-social-icon{
 fill: var(--second-bg-color);
 }
 
-.team-socials-link:hover,
-.team-socials-link:focus {
-background-color:var(--second-btnlink-color);
-}
+
 
 
 
@@ -512,7 +536,6 @@ background-color:var(--second-btnlink-color);
 .customers-title {
   margin-bottom: 72px;
   line-height: 1.1;
-  
 }
 
 .customers-list {
@@ -540,6 +563,8 @@ border-radius: 4px;
 padding: 16px 32px;
 color: var(--customer-icon);
 
+transition: color 250ms var(--timing-fun-animation), 
+border-color 250ms var(--timing-fun-animation);
 }
 
 .customers-link:hover,
@@ -551,12 +576,16 @@ border-color:var(--second-btnlink-color);
 
 .customers-icon{
   fill:currentColor;
+  transition: fill 250ms var(--timing-fun-animation);
 }
 
 .customers-icon:hover,
 .customers-icon:focus { 
 fill:currentColor;
 }
+
+
+
 
 
 /**
@@ -599,6 +628,9 @@ fill:currentColor;
   padding: 12px 24px;
   border-radius: 4px;
   border: 1px solid var(--border-color);
+
+  transition: color 250ms var(--timing-fun-animation), 
+  background-color 250ms var(--timing-fun-animation);
 }
 
 .pf-butt-filter:hover,
@@ -641,6 +673,7 @@ border-top: none;
 
 .pf-item-link-hofo{
   display: block;
+  transition: box-shadow 250ms var(--timing-fun-animation);
 }
 
 .pf-item-link-hofo:hover,
@@ -648,13 +681,10 @@ border-top: none;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-
 .pf-img-frame-box{
   position: relative;
   overflow: hidden ;
 }
-
-
 
 .pf-overlay{
   position: absolute;
@@ -674,13 +704,15 @@ border-top: none;
   color:var(--pf-frame-color);
 
   transform: translateY(100%);
-  transition: transform 250ms var(--timing-fun-animation) ;
+  transition: transform 250ms var(--timing-fun-animation);
 }
 
 .pf-item-card:hover .pf-overlay{
   transform: translateY(0);
-
 }
+
+
+
 
 
 /**
@@ -711,7 +743,6 @@ padding: 0px;
 margin: 0px;
 padding: 0px;
 min-width:264px;
-
 }
 
 
@@ -762,16 +793,21 @@ width: 100%;
 
 background:var(--first-social-color);
 border-radius: 50%;
+
+transition: background-color 250ms var(--timing-fun-animation);
 }
 
 .footer-social-icon {
 fill: var(--second-bg-color);
 }
 
+
 .footer-social-link:hover,
 .footer-social-link:focus {
 background-color:var(--third-social-color);
 }
+
+
 
 
 
@@ -819,13 +855,15 @@ background-color:var(--third-social-color);
   justify-content: center;
   margin-left: auto;
 
-
   width: 24px;
   height: 24px;
   border-radius: 50%;
   cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--border-color);
+
+  transition: background-color 250ms var(--timing-fun-animation),
+  fill 250ms var(--timing-fun-animation);
 }
 
 
