@@ -56,11 +56,10 @@ html {
   --timing-fun-animation: cubic-bezier(0.4, 0, 0.2, 1);
   --anim-fast: 250ms ease-in;
   --anim-slow: 1000ms ease-in-out;
-
-
-
-
 }
+
+
+
 
 /**
   |============================
@@ -114,9 +113,8 @@ h1,h2,h3,h4,h5,h6,p,ul,ol {
 .link {
   color: currentColor;
   text-decoration: none;
-
-  transition: color 250ms var(--timing-fun-animation);
 }
+
 .link:hover,
 .link:focus {
   color: var(--second-btnlink-color);
@@ -176,12 +174,21 @@ button {
   color: var(--main-title-color);
   border-bottom: 1px solid var(--border-color);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-
 }
 
 .header-container {
   display: flex;
   align-items: center;
+}
+
+.head-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-list {
+  display: flex;
+  gap: 40px;
 }
 
 .header-nav-link {
@@ -199,21 +206,14 @@ button {
   transition: color 250ms var(--timing-fun-animation);
 }
 
+.header-nav-link.actual-link{
+color: var(--second-btnlink-color);
+}
+
 .header-nav-link:hover,
 .header-nav-link:focus {
   color: var(--second-btnlink-color);
 }
-
-.head-navigation {
-  display: flex;
-  align-items: center;
-}
-
-.navigation-list {
-  display: flex;
-  gap: 40px;
-}
-
 
 .header-nav-link::after{
 content:'';
@@ -225,13 +225,15 @@ border-radius: 2px;
 display: block;
 position: absolute;
 left: 0;
-bottom: 0;
-transition: 250ms var(--timing-fun-animation);
+bottom: -1px;
+transition: background-color 250ms var(--timing-fun-animation);
 }
 
 .header-nav-link.actual-link::after{
 background-color: var(--second-btnlink-color);
 }
+
+
 
 
 /**
@@ -622,6 +624,7 @@ fill:currentColor;
   font-size: 16px;
   line-height: 1.5;
   border-radius: 4px;
+  cursor: pointer;
 
   background-color: var(--second-bg-color);
   color: var(--first-btnlink-color);
@@ -632,6 +635,7 @@ fill:currentColor;
 
   transition: color 250ms var(--timing-fun-animation), 
   border 250ms var(--timing-fun-animation),
+  box-shadow 250ms var(--timing-fun-animation),
   background-color 250ms var(--timing-fun-animation);
 }
 
@@ -640,8 +644,6 @@ fill:currentColor;
   color: var(--main-btn-color);
   background-color: var(--second-btnlink-color);
   border: 1px solid transparent;
-  cursor: pointer;
-
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
   0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -761,7 +763,6 @@ min-width:264px;
   font-size: 16px;
 }
 
-
 .footer-social-title {
   font-weight: 500;
   font-size: 16px;
@@ -835,11 +836,11 @@ background-color:var(--third-social-color);
 }
 
 .backdrop.is-hidden {
-  opacity: 0.1;
+  opacity: 0;
   pointer-events: none;
   visibility: hidden;
   backdrop-filter: blur(0);
-  transition-delay: 250ms;
+
 }
 
 .modal {
